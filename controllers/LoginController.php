@@ -16,7 +16,8 @@
 		public function index()
 		{
 			if(isset($_SESSION['usuariopersona'])) {
-				header('Location: ?controller=grado');
+				//echo $_SESSION['usuariopersona']->id;
+				header('Location: ?controller=usuario&method=info&id='.$_SESSION['usuariopersona']->id);
 			} else {
 				require 'views/login.php';
 			}
@@ -26,7 +27,8 @@
 		{
 			$validateUsuario = $this->model->validateUsuario($_POST);
 			if($validateUsuario === true) {
-				header('Location: ?controller=grado');
+				//echo $_SESSION['usuariopersona']->id;
+				header('Location: ?controller=usuario&method=info&id='.$_SESSION['usuariopersona']->id);
 			} else {
 				$error = [
 					'errorMessage' => $validateUsuario,

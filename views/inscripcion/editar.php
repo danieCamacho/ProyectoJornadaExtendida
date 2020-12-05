@@ -39,7 +39,7 @@
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label class="float-left" for="fecha">Fecha</label>
-                                                    <input id="fecha" name="fecha" type="date" class="form-control" value="<?php echo $idpersona[0]->fecha ?>" readonly>
+                                                    <input  name="fecha" type="date" class="form-control" value="<?php echo $idpersona[0]->fecha ?>" readonly>
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
@@ -78,7 +78,7 @@
                                         </div> 
                                     </div>
                                     <div class="modal-footer float-right">
-                                        <button class="btn btn-primary">Agregar Inscripcion</button>
+                                        <button class="btn btn-primary">Editar Inscripcion</button>
                                         <a href="?controller=estudiante&method=view&id=<?php echo $cursos[0]->id_curso ?>" class="btn btn-secondary" data-dismiss="modal">Cancelar</a>
                                     </div>
                                 </form>

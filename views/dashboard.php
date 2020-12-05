@@ -1,3 +1,17 @@
+
+<?php 
+    if(isset($_SESSION['usuariopersona']->rol)){
+    //echo  $_SESSION['usuariopersona']->rol;
+    }
+    else{
+    header('location: ?controller=login');
+    }
+    $ocultar="";
+    if($_SESSION['usuariopersona']->rol == "Estudiante")
+    {    
+    $ocultar="none";
+    }
+?>
 <!doctype html>
 <html lang="en">
 
@@ -126,21 +140,21 @@
                             <div class="app-sidebar__inner">
                                 <ul class="vertical-nav-menu">
                                     <li class="app-sidebar__heading">Modulos</li>
-                                    <li>
+                                    <li style="display: <?php echo $ocultar; ?>">
                                         <a href="?controller=centrointeres">
                                             <i class="metismenu-icon fa fa-dribbble"></i>
                                             Centros de Interés
                                         </a>
                                         
                                     </li>
-                                    <li>
+                                    <li style="display: <?php echo $ocultar; ?>">
                                         <a href="?controller=inscripcion">
                                             <i class="metismenu-icon far fa-address-card"></i>
                                             Inscripcion
                                         </a>
                                         
                                     </li>
-                                    <li>
+                                    <li style="display: <?php echo $ocultar; ?>">
                                         <a href="?controller=rolusu">
                                             <i class="metismenu-icon fas fa-people-arrows"></i>
                                             Roles
@@ -154,13 +168,13 @@
                                         </a>
                                         
                                     </li>
-                                    <li>
+                                    <li style="display: <?php echo $ocultar; ?>">
                                         <a href="?controller=profesor">
                                             <i class="metismenu-icon fa fa-chalkboard-teacher"></i>
                                             Profesor
                                         </a>
                                     </li>
-                                    <li>
+                                    <li style="display: <?php echo $ocultar; ?>">
                                         <a href="?controller=grado">
                                             <i class="metismenu-icon fa fa-graduation-cap"></i>
                                             Grado

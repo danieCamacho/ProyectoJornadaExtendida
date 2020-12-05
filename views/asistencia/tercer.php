@@ -141,6 +141,8 @@
 																<div class="form-group">
 																	<label class="float-left" for="fecha">Fecha</label>
 																		<input id="fecha" name="fecha" type="text" class="form-control" placeholder="Fecha Clase" required readonly>
+																		<input type="hidden" value="<?php echo $cursos[0]->id_curso ?>" name="id_curso">
+																		<input type="hidden" value="3" name="id_categoria">
 																</div>
 															</div>
 															<div class="col-md-6">
@@ -149,22 +151,22 @@
 																	<?php if($centro[0]->categoria == 3){
 																		?>
 																			<input class="form-control" id="centro" value="<?php echo $centro[0]->centro ?>" readonly required>
-																			<input type="hidden" id="centrofecha" value="<?php echo $centro[0]->id_centro ?>">
+																			<input type="hidden" id="centrofecha" value="<?php echo $centro[0]->id_centro ?>" name="id_centro">
 																		<?php
 																		}elseif($centro[1]->categoria == 3){
 																		?>
 																			<input class="form-control" id="centro" value="<?php echo $centro[1]->centro ?>" readonly required>
-																			<input type="hidden" id="centrofecha" value="<?php echo $centro[1]->id_centro ?>">
+																			<input type="hidden" id="centrofecha" value="<?php echo $centro[1]->id_centro ?>" name="id_centro">
 																		<?php
 																		}elseif($centro[2]->categoria == 3){
 																		?>
 																			<input class="form-control" id="centro" value="<?php echo $centro[2]->centro ?>" readonly required>
-																			<input type="hidden" id="centrofecha" value="<?php echo $centro[2]->id_centro ?>">
+																			<input type="hidden" id="centrofecha" value="<?php echo $centro[2]->id_centro ?>" name="id_centro">
 																		<?php
 																			}elseif($centro[3]->categoria == 3){
 																				?>
 																			<input class="form-control" id="centro" value="<?php echo $centro[3]->centro ?>" readonly required>
-																			<input type="hidden" id="centrofecha" value="<?php echo $centro[3]->id_centro ?>">
+																			<input type="hidden" id="centrofecha" value="<?php echo $centro[3]->id_centro ?>" name="id_centro">
 																		<?php
 																	}
 																	?>

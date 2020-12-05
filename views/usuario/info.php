@@ -1,12 +1,5 @@
                             
                             <div class="row">
-                            <div class="col-md-6">
-									<div class="mb-3 card">
-                                        <div class="modal-body">
-                                            <h4 class="m-2"> Información X</h4>
-                                        </div>
-									</div>    
-								</div>
 								<div class="col-md-6">
 									<div class="mb-3 card">
 										<form action="?controller=usuario&method=update" method="POST">

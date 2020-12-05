@@ -22,7 +22,7 @@ class Login
         try {
             // Encriptar contraseña
             //$data['clave'] = hash('sha256', $data['clave']);
-            $strSql = "SELECT usu.*, rol.nombre rol, p.nombre persona, p.apellido apersona FROM usuariopersona usu INNER JOIN rolusuario rol ON rol.id_rol = usu.id_rol inner join persona p on p.id_usuario=usu.id_usuario WHERE usu.email = '{$data['email']}' AND usu.clave = '{$data['clave']}' ";
+            $strSql = "SELECT usu.*, rol.nombre rol, p.id_persona id,  p.nombre persona, p.apellido apersona FROM usuariopersona usu INNER JOIN rolusuario rol ON rol.id_rol = usu.id_rol inner join persona p on p.id_usuario=usu.id_usuario WHERE usu.email = '{$data['email']}' AND usu.clave = '{$data['clave']}' ";
 
             $query = $this->pdo->select($strSql);
             
